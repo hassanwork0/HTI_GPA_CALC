@@ -118,6 +118,8 @@ class _GPACalculatorScreenState extends State<GPACalculatorScreen> {
 
             Row(
               children: [
+                //screen width > 700
+                if(MediaQuery.of(context).size.width > 700)
                 const Text(
                   'Total GPA',
                   style: TextStyle(fontSize: 16, color: Colors.grey),
@@ -137,6 +139,7 @@ class _GPACalculatorScreenState extends State<GPACalculatorScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                if(MediaQuery.of(context).size.width > 700)
                 Container(
                   width: 12,
                   height: 12,
@@ -147,7 +150,7 @@ class _GPACalculatorScreenState extends State<GPACalculatorScreen> {
                 ),
                 const SizedBox(width: 8),
                 Text(
-                  'Total Credit Hours: $_totalCreditHours',
+                  'Total Hours: $_totalCreditHours',
                   style: TextStyle(
                     fontSize: 14,
                     color: Colors.grey[600],
